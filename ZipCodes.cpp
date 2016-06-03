@@ -23,12 +23,12 @@ static std::map<int, LatLon> static_ZipCodesMap;
 auto GetLatAndLon(const int32_t zipCode) -> LatLon
 {
 	// Find the zipcode
-	auto zipFound = static_ZipCodesMap.find(zipCode);
+    auto zipFound = static_ZipCodesMap.find(zipCode);
 	
-	if(zipFound != static_ZipCodesMap.end())
-		return (*zipFound).second;
-	else
-		return LatLon(0,0); // return zero if not found 
+    if(zipFound != static_ZipCodesMap.end())
+        return (*zipFound).second;
+    else
+        return LatLon(0,0); // return zero if not found 
 }
 
 class FileHandler
@@ -107,8 +107,8 @@ auto LoadZipCodes(const UTF8Path filePath) -> std::tuple<Success, ErrMessage>
 // Function to clean up after ourselves
 void ReleaseZipCodes()
 {
-	if ( !static_ZipCodesMap.empty() )
-		static_ZipCodesMap.clear();
+    if ( !static_ZipCodesMap.empty() )
+        static_ZipCodesMap.clear();
 }
 
 auto ConvertStringToDouble ( const std::string stringVal ) -> double
@@ -116,8 +116,8 @@ auto ConvertStringToDouble ( const std::string stringVal ) -> double
     auto ss = std::stringstream{};
     auto doubleVal = double{0};
 	
-	ss << stringVal;
-	ss >> doubleVal;
+    ss << stringVal;
+    ss >> doubleVal;
 		
 	return doubleVal;
 }
