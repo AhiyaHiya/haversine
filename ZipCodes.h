@@ -8,9 +8,12 @@
 
 #include <string>
 #include <map>
+#include <tuple>
 
-using namespace std;
-
+using UTF8Path   = std::string;
+using ErrNum     = int32_t;
+using ErrMessage = std::string;
+using Success    = bool;
 
 // Structure for containing our Latitude and Longitude pair
 struct LatLon
@@ -30,13 +33,13 @@ public:
 };
 
 // Function for returning our Latitude and Longitude
-LatLon GetLatAndLon(int nZipCode);
+auto GetLatAndLon(const int32_t zipCode) -> LatLon;
 
-// Function for reading in our zip code table
-int LoadZipCodes(std::string strPathToFile);
+auto LoadZipCodes(const UTF8Path filePath) -> std::tuple<Success, ErrMessage>;
+
 
 // Function to clean up our global map
 void ReleaseZipCodes();
 
 // Function for converting strings to double
-double ToDouble ( string strVal );
+double ToDouble ( std::string strVal );

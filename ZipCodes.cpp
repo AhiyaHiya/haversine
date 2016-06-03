@@ -11,92 +11,113 @@
 #include <errno.h> // for errno
 #include <sstream> // for converting strings to double
 #include <cstring>
+#include <vector>
 
 /* In order for us to use our Zip codes, Latitudes and Longitudes, we have to store 
 	those values in a container variable. Since out interface uses Zip code for 
 	calculating our distances, we are going to use a stl map to hold our values and 
 	give use the ability to search by zip code. */
-static map<int, LatLon> g_ZipCodes;
+static std::map<int, LatLon> static_ZipCodesMap;
 
 // Function for returning our Latitude and Longitude
-LatLon GetLatAndLon(int nZipCode)
+auto GetLatAndLon(const int32_t zipCode) -> LatLon
 {
 	// Find the zipcode
-	map<int, LatLon>::iterator zipFound = g_ZipCodes.find(nZipCode);
+	auto zipFound = static_ZipCodesMap.find(zipCode);
 	
-	if(zipFound != g_ZipCodes.end())
+	if(zipFound != static_ZipCodesMap.end())
 		return (*zipFound).second;
 	else
 		return LatLon(0,0); // return zero if not found 
 }
 
-/* 
+class FileHandler
+{
+public:
+    FileHandler(UTF8Path filePath)
+    : _file{nullptr}
+    {
+        if (filePath.length() > 0)
+        {
+            _file = fopen(filePath.c_str(),"r");
+        }
+    };
+    
+    ~FileHandler()
+    {
+        if (_file != nullptr)
+        {
+            fclose(_file);
+            _file = nullptr;
+        }
+    }
+    
+    auto FileDescriptor() -> FILE* { return _file; }
+    
+private:
+    FILE* _file;
+};
+/*
  Function for reading in our zip code table file.
  Returns 0 when no errors were encounted or a positive number when an error was found.
  */
-int LoadZipCodes(string strPathToFile)
+auto LoadZipCodes(const UTF8Path filePath) -> std::tuple<Success, ErrMessage>
 {
 	// Make sure we have a path to work with
-	if (strPathToFile.length() > 0)
+	if (filePath.length() > 0)
 	{
-		char	cLine[1024] = {0x0};		// Character array to hold the contents of each line
-		char	cFields[ 6 ][ 32 ] = {0x0};	// Multidimensional character array to hold each field found in a line
-		FILE*	pF = NULL;					// File pointer
+        auto line = std::vector<char>(1024, 0);
+		char fields[ 6 ][ 32 ] = {0x0};	// Multidimensional character array to hold each field found in a line
 		
-		// Attempt to open our file in read only mode
-		pF = fopen(strPathToFile.c_str(),"r");
-		
+        auto file = FileHandler(filePath);
+        
 		// Check to see if there were any errors
-		if (pF == NULL) 
+		if (file.FileDescriptor() == nullptr)
 		{
-			/* When an error occurs while opening a file, you can get the description by 
-				using the strerror function on the global errno number */
-			printf ( "An error occurred while attempting to open our file: %s", strerror (errno) );
-			return 1;
+            auto errorString = std::vector<char>(1024, 0);
+			sprintf (errorString.data(), "An error occurred while attempting to open our file: %s", strerror (errno) );
+            return std::make_tuple(false, ErrMessage{ errorString.data() });
 		}
 		
 		// If we got to this point, let's iterate over every line in our file and extract each field
-		while( fgets ( cLine, sizeof(cLine), pF) !=0 )
+        auto filePtr = file.FileDescriptor();
+		while( fgets ( line.data(), line.size(), filePtr) !=0 )
 		{
 			/* 
 			 Here strtok is used to first extract the field, then it is called 
 			 recursively, with a NULL pointer, to get the remaining fields. */
-			char*	pField = strtok(cLine, ",");
-			int		nFld = 0;
+			auto field = strtok(line.data(), ",");
+			auto index = 0;
 			
-			while( pField != 0)
+			while( field != 0)
 			{
-				strcpy(cFields[nFld], pField);
-				++nFld;
+				strcpy(fields[index], field);
+				++index;
                 auto token = '\0';
-                pField = std::strtok(&token, ",");
+                field = std::strtok(&token, ",");
 			}
 			
 			// Now that we got our fields, let's get our latitude, longitude and zipcode
 			// First, convert our C strings to doubles
-			LatLon sLL( ToDouble(cFields[2]), ToDouble(cFields[3]) );
-			g_ZipCodes[ atoi(cFields[0]) ] = sLL;
+			LatLon sLL( ToDouble(fields[2]), ToDouble(fields[3]) );
+			static_ZipCodesMap[ atoi(fields[0]) ] = sLL;
 		}
-		
-		// Close our file
-		fclose (pF);
-		
-		// If we got to this point, we are error free!
-		return 0;
+    
+		return std::make_tuple(true, ErrMessage{ "Success" });
 	}
 	else
-		return 1;
+		return std::make_tuple(false, ErrMessage{ "Fail" });
 }
 
 // Function to clean up after ourselves
 void ReleaseZipCodes()
 {
-	if ( !g_ZipCodes.empty() )
-		g_ZipCodes.clear();
+	if ( !static_ZipCodesMap.empty() )
+		static_ZipCodesMap.clear();
 }
 
 // Function to convert string to double
-double ToDouble ( string strVal )
+double ToDouble ( std::string strVal )
 {
 	std::stringstream ss;
 	double nVal;
