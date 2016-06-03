@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D72BD0F1D01CC3A00490D44 /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = 2D72BD0E1D01CC3A00490D44 /* README.markdown */; };
 		2D882AA00D5F9A540018222C /* WndController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D882A9F0D5F9A540018222C /* WndController.mm */; };
 		2DA421480D688DD3003E5D41 /* ZipCodes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DA421470D688DD3003E5D41 /* ZipCodes.cpp */; };
 		2DA422410D68A0F1003E5D41 /* zips.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2DA422400D68A0F1003E5D41 /* zips.csv */; };
@@ -25,6 +26,7 @@
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2D72BD0E1D01CC3A00490D44 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		2D882A9E0D5F9A540018222C /* WndController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WndController.h; sourceTree = "<group>"; };
 		2D882A9F0D5F9A540018222C /* WndController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WndController.mm; sourceTree = "<group>"; };
 		2DA421460D688DD3003E5D41 /* ZipCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipCodes.h; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		29B97314FDCFA39411CA2CEA /* Haversine */ = {
 			isa = PBXGroup;
 			children = (
+				2D72BD0E1D01CC3A00490D44 /* README.markdown */,
 				2DA421450D688DBA003E5D41 /* Example code */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -163,9 +166,15 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Haversine" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Haversine */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				2D72BD0F1D01CC3A00490D44 /* README.markdown in Sources */,
 				2D882AA00D5F9A540018222C /* WndController.mm in Sources */,
 				2DBF525D0D67C6A4001B6EB4 /* Harversine.cpp in Sources */,
 				2DA421480D688DD3003E5D41 /* ZipCodes.cpp in Sources */,
