@@ -42,4 +42,4 @@ auto LoadZipCodes(const UTF8Path filePath) -> std::tuple<Success, ErrMessage>;
 void ReleaseZipCodes();
 
 // Function for converting strings to double
-double ToDouble ( std::string strVal );
+auto ConvertStringToDouble ( const std::string stringVal ) -> double;
