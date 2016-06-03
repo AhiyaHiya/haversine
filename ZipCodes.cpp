@@ -10,7 +10,7 @@
 #include <cstdlib> // for atod function
 #include <errno.h> // for errno
 #include <sstream> // for converting strings to double
-
+#include <cstring>
 
 /* In order for us to use our Zip codes, Latitudes and Longitudes, we have to store 
 	those values in a container variable. Since out interface uses Zip code for 
@@ -51,7 +51,7 @@ int LoadZipCodes(string strPathToFile)
 		{
 			/* When an error occurs while opening a file, you can get the description by 
 				using the strerror function on the global errno number */
-			printf ( "An error occurred while attempting to open our file: %d", strerror (errno) );
+			printf ( "An error occurred while attempting to open our file: %s", strerror (errno) );
 			return 1;
 		}
 		
@@ -68,7 +68,8 @@ int LoadZipCodes(string strPathToFile)
 			{
 				strcpy(cFields[nFld], pField);
 				++nFld;
-				pField = strtok('\0', ",");
+                auto token = '\0';
+                pField = std::strtok(&token, ",");
 			}
 			
 			// Now that we got our fields, let's get our latitude, longitude and zipcode
