@@ -6,6 +6,11 @@
  *
  */
 
-double CalculateDistance( double nLat1, double nLon1, double nLat2, double nLon2 );
+using Angle      = double;
+using Radians    = double;
+using Kilometers = double;
 
-double ToRad( double nVal );
+
+auto CalculateDistance( Angle latitude1, Angle longtitude1, Angle latitude2, Angle longtitude2 ) -> Angle;
+
+auto Convert( const Angle angle ) -> Radians;

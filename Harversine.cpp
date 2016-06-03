@@ -10,6 +10,7 @@
 
 #include <math.h> // For PI
 
+
 /*
  Haversine Formula
  R = earth’s radius (mean radius = 6,371km)
@@ -31,29 +32,29 @@
  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
  var d = R * c;
  */
-double CalculateDistance( double nLat1, double nLon1, double nLat2, double nLon2 )
+auto CalculateDistance( Angle latitude1, Angle longtitude1, Angle latitude2, Angle longtitude2 ) -> Angle
 {
-	double nRadius = 6371; // Earth's radius in Kilometers
+    auto radius = Kilometers{ 6371 }; // Earth's radius
 
 	// Get the difference between our two points then convert the difference into radians
-	double nDLat = ToRad(nLat2 - nLat1);  
-	double nDLon = ToRad(nLon2 - nLon1); 
+    auto latDelta = Convert(latitude2 - latitude1);
+    auto lonDelta = Convert(longtitude2 - longtitude1);
 
-	nLat1 =  ToRad(nLat1);
-	nLat2 =  ToRad(nLat2);
+    latitude1     = Convert(latitude1);
+    latitude2     = Convert(latitude2);
 	
-	double nA =	pow ( sin(nDLat/2), 2 ) +
-				cos(nLat1) * cos(nLat2) * 
-				pow ( sin(nDLon/2), 2 );
+	auto a = pow ( sin(latDelta/2), 2 ) +
+			 cos(latitude1) * cos(latitude2) *
+			 pow ( sin(lonDelta/2), 2 );
 	
-	double nC = 2 * atan2( sqrt(nA), sqrt( 1 - nA ));
-	double nD = nRadius * nC;
+	auto c = 2 * atan2( sqrt(a), sqrt( 1 - a ));
+	auto d = radius * c;
 	
-	return nD; // Return our calculated distance
+	return d;
 }
 
 // Convert our passed value to Radians
-double ToRad( double nVal )
+auto Convert( const Angle angle ) -> Radians
 {
-	return nVal * (M_PI/180);
+	return angle * (M_PI/180);
 }
