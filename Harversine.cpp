@@ -43,14 +43,14 @@ auto CalculateDistance( Angle latitude1, Angle longtitude1, Angle latitude2, Ang
     latitude1     = Convert(latitude1);
     latitude2     = Convert(latitude2);
 	
-    auto a = pow ( sin(latDelta/2), 2 ) +
-             cos(latitude1) * cos(latitude2) *
-             pow ( sin(lonDelta/2), 2 );
+    const auto a = pow ( sin(latDelta/2), 2 ) +
+                   cos(latitude1) * cos(latitude2) *
+                   pow ( sin(lonDelta/2), 2 );
 	
-    auto c = 2 * atan2( sqrt(a), sqrt( 1 - a ));
-    auto d = radius * c;
+    const auto c = 2 * atan2( sqrt(a), sqrt( 1 - a ));
+    const auto d = radius * c;
 	
-	return d;
+    return d;
 }
 
 // Convert our passed value to Radians
