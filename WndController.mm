@@ -38,6 +38,7 @@ using namespace std;
  */
 - (void)windowWillClose:(NSNotification *)notification
 {
+    (void)notification;
 	ReleaseZipCodes();
 }
 
@@ -49,53 +50,56 @@ using namespace std;
  */
 - (IBAction)calculate:(id)sender 
 {
-	double nLat1 = 0.0;
-	double nLon1 = 0.0;
-	double nLat2 = 0.0;
-	double nLon2 = 0.0;
+    (void)sender;
+	Angle lat1 = 0.0;
+	Angle lon1 = 0.0;
+	Angle lat2 = 0.0;
+	Angle lon2 = 0.0;
 	
-	double nDist = 0.0;
+	Angle distance = 0.0;
 	
 	if ( [chkUseLatLon state] )
 	{
 		// We are using Latitude and Longitude
-		nLat1 = [txtLat1 doubleValue];
-		nLon1 = [txtLon1 doubleValue];
-		nLat2 = [txtLat2 doubleValue];
-		nLon2 = [txtLon2 doubleValue];
+		lat1 = [txtLat1 doubleValue];
+		lon1 = [txtLon1 doubleValue];
+		lat2 = [txtLat2 doubleValue];
+		lon2 = [txtLon2 doubleValue];
 		
-		nDist = CalculateDistance(nLat1, nLon1, nLat2, nLon2);
+		distance = CalculateDistance(lat1, lon1, lat2, lon2);
 	}
 	else
 	{
 		// We are using zip codes instead
-		int nZip1 = [txtZip1 integerValue];
-		int nZip2 = [txtZip2 integerValue];
+		int zip1 = [txtZip1 integerValue];
+		int zip2 = [txtZip2 integerValue];
 		
 		// Get our Latitude and Longitude for each zip code
-		LatLon sLL1 = GetLatAndLon(nZip1);
-		LatLon sLL2 = GetLatAndLon(nZip2);
+		LatLon ll1 = GetLatAndLon(zip1);
+		LatLon ll2 = GetLatAndLon(zip2);
 		
-		nLat1 = sLL1.GetLat();
-		nLon1 = sLL1.GetLon();
-		nLat2 = sLL2.GetLat();
-		nLon2 = sLL2.GetLon();
+		lat1 = ll1.GetLat();
+		lon1 = ll1.GetLon();
+		lat2 = ll2.GetLat();
+		lon2 = ll2.GetLon();
 		
-		nDist = CalculateDistance(nLat1, nLon1, nLat2, nLon2);
+		distance = CalculateDistance(lat1, lon1, lat2, lon2);
 	}
 	
-	if ( nDist > 0.0 )
+	if ( distance > 0.0 )
 	{
 		// Our value is returned to us in Kilometers, so it has to be converted to Miles if needed
 		if ( [chkMiles state] )
-			nDist = nDist/1.609344;
+			distance = distance/1.609344;
 		
-		[txtRDist setDoubleValue:nDist];// Set our control value
+		[txtRDist setDoubleValue:distance];// Set our control value
 	}
 }
 
 - (IBAction)clear:(id)sender 
 {
+    (void)sender;
+    
     [txtLat1 setStringValue:@""];
     [txtLat2 setStringValue:@""];
     [txtLon1 setStringValue:@""];
@@ -113,6 +117,8 @@ using namespace std;
 
 - (IBAction)checkKilometers:(id)sender 
 {
+    (void)sender;
+    
     // Get the state of the button and toggle the otherbutton	
 	if ( [chkKiloMeters state] )
 		[chkMiles setState:NSOffState];
@@ -122,6 +128,8 @@ using namespace std;
 
 - (IBAction)checkMiles:(id)sender 
 {
+    (void)sender;
+    
 	if ( [chkMiles state] )
 		[chkKiloMeters setState:NSOffState];    
 	else
@@ -130,6 +138,8 @@ using namespace std;
 
 - (IBAction)checkUseLatLon:(id)sender;
 {
+    (void)sender;
+    
 	if ( [chkUseLatLon state] )
 		[chkUseZip setState:NSOffState];    
 	else
@@ -138,6 +148,8 @@ using namespace std;
 
 - (IBAction)checkUseZip:(id)sender;
 {
+    (void)sender;
+    
 	if ( [chkUseZip state] )
 		[chkUseLatLon setState:NSOffState];    
 	else
