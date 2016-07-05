@@ -19,17 +19,18 @@ using Success    = bool;
 struct LatLon
 {
 private:
-	double nLat;
-	double nLon;
+	double latitude;
+	double longtitude;
+    
 public:
-	LatLon() : nLat (0), nLon(0){};
-	LatLon(double lat, double lon) : nLat (lat), nLon(lon){};
+	LatLon() : latitude (0), longtitude(0){};
+	LatLon(double lat, double lon) : latitude (lat), longtitude(lon){};
 	
-	double GetLat(){return nLat;};
-	double GetLon(){return nLon;};
+	double GetLat(){return latitude;};
+	double GetLon(){return longtitude;};
 	
-	void SetLat(double nVal){nLat=nVal;};
-	void SetLon(double nVal){nLon=nVal;};
+	void SetLat(double newVal){latitude=newVal;};
+	void SetLon(double newVal){longtitude=newVal;};
 };
 
 // Function for returning our Latitude and Longitude
