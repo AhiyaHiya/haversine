@@ -41,3 +41,7 @@ Math.sin(dLon/2) * Math.sin(dLon/2);
 var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
 var d = R * c;
+
+
+# Changes
+Code has been modified to use C++14 formatting and where appropriate, code has been reformatted to be more verbose.
