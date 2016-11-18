@@ -6,8 +6,8 @@
  *
  */
 
-#include <string>
 #include <map>
+#include <string>
 #include <tuple>
 
 using UTF8Path   = std::string;
@@ -18,29 +18,26 @@ using Success    = bool;
 // Structure for containing our Latitude and Longitude pair
 struct LatLon
 {
-private:
-	double latitude;
-	double longtitude;
-    
-public:
-	LatLon() : latitude (0), longtitude(0){};
-	LatLon(double lat, double lon) : latitude (lat), longtitude(lon){};
-	
-	double GetLat(){return latitude;};
-	double GetLon(){return longtitude;};
-	
-	void SetLat(double newVal){latitude=newVal;};
-	void SetLon(double newVal){longtitude=newVal;};
+  private:
+    double latitude;
+    double longtitude;
+
+  public:
+    LatLon()
+        : latitude(0)
+        , longtitude(0){};
+    LatLon(const double lat, const double lon)
+        : latitude(lat)
+        , longtitude(lon){};
+
+    double GetLat() const { return latitude; };
+    double GetLon() const { return longtitude; };
+
+    void SetLat(const double newVal) { latitude = newVal; };
+    void SetLon(const double newVal) { longtitude = newVal; };
 };
 
-// Function for returning our Latitude and Longitude
-auto GetLatAndLon(const int32_t zipCode) -> LatLon;
+using ZipCode    = int32_t;
+using ZipCodeMap = std::map< ZipCode, LatLon >;
 
-auto LoadZipCodes(const UTF8Path filePath) -> std::tuple<Success, ErrMessage>;
-
-
-// Function to clean up our global map
-void ReleaseZipCodes();
-
-// Function for converting strings to double
-auto ConvertStringToDouble ( const std::string stringVal ) -> double;
+auto LoadZipCodes(const UTF8Path filePath) -> std::tuple< Success, ErrMessage, ZipCodeMap >;
