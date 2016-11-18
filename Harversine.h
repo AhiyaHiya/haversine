@@ -10,7 +10,9 @@ using Angle      = double;
 using Radians    = double;
 using Kilometers = double;
 
+auto CalculateDistance(const Angle latitude1,
+                       const Angle longtitude1,
+                       const Angle latitude2,
+                       const Angle longtitude2) -> Angle;
 
-auto CalculateDistance( Angle latitude1, Angle longtitude1, Angle latitude2, Angle longtitude2 ) -> Angle;
-
-auto Convert( const Angle angle ) -> Radians;
+auto Convert(const Angle angle) -> Radians;
