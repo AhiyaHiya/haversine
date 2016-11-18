@@ -1,9 +1,13 @@
 #import <Cocoa/Cocoa.h>
+#import "ZipCodes.h"
 
-@interface WndController : NSObject {
+@interface WndController : NSObject
+{
+    ZipCodeMap _zipCodeMap;
+    
     IBOutlet id chkKiloMeters;
     IBOutlet id chkMiles;
-	IBOutlet id chkUseLatLon;
+    IBOutlet id chkUseLatLon;
     IBOutlet id chkUseZip;
     IBOutlet id txtLat1;
     IBOutlet id txtLat2;
