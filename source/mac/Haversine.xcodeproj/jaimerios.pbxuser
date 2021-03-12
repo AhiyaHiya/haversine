@@ -419,7 +419,7 @@
 		vrLen = 196;
 		vrLoc = 0;
 	};
-	2DA421460D688DD3003E5D41 /* ZipCodes.h */ = {
+	2DA421460D688DD3003E5D41 /* zipcodes.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {955, 602}}";
 			sepNavSelRange = "{720, 0}";
@@ -447,8 +447,8 @@
 	};
 	2DA4216C0D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 37";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 37";
 		rLen = 190;
 		rLoc = 636;
 		rType = 0;
@@ -475,8 +475,8 @@
 	};
 	2DA4216F0D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 5";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 5";
 		rLen = 0;
 		rLoc = 72;
 		rType = 0;
@@ -495,8 +495,8 @@
 	};
 	2DA421710D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 19";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 19";
 		rLen = 0;
 		rLoc = 500;
 		rType = 0;
@@ -515,8 +515,8 @@
 	};
 	2DA421730D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 21";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 21";
 		rLen = 325;
 		rLoc = 501;
 		rType = 0;
@@ -535,8 +535,8 @@
 	};
 	2DA421750D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 11";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 11";
 		rLen = 0;
 		rLoc = 137;
 		rType = 0;
@@ -555,8 +555,8 @@
 	};
 	2DA421770D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 10";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 10";
 		rLen = 38;
 		rLoc = 99;
 		rType = 0;
@@ -575,8 +575,8 @@
 	};
 	2DA421790D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 27";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 27";
 		rLen = 190;
 		rLoc = 636;
 		rType = 0;
@@ -595,8 +595,8 @@
 	};
 	2DA4217B0D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 27";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 27";
 		rLen = 190;
 		rLoc = 636;
 		rType = 0;
@@ -615,8 +615,8 @@
 	};
 	2DA4217D0D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 27";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 27";
 		rLen = 0;
 		rLoc = 658;
 		rType = 0;
@@ -635,8 +635,8 @@
 	};
 	2DA4217F0D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 27";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 27";
 		rLen = 190;
 		rLoc = 636;
 		rType = 0;
@@ -655,8 +655,8 @@
 	};
 	2DA421810D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 35";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 35";
 		rLen = 190;
 		rLoc = 636;
 		rType = 0;
@@ -675,8 +675,8 @@
 	};
 	2DA421830D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 37";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 37";
 		rLen = 190;
 		rLoc = 636;
 		rType = 0;
@@ -715,8 +715,8 @@
 	};
 	2DA421930D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 30";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 30";
 		rLen = 0;
 		rLoc = 500;
 		rType = 0;
@@ -725,8 +725,8 @@
 	};
 	2DA421940D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 13";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 13";
 		rLen = 0;
 		rLoc = 136;
 		rType = 0;
@@ -856,8 +856,8 @@
 	};
 	2DA421A90D689AF3003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 13";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 13";
 		rLen = 0;
 		rLoc = 136;
 		rType = 0;
@@ -934,8 +934,8 @@
 	};
 	2DA421B30D689B46003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 13";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 13";
 		rLen = 0;
 		rLoc = 136;
 		rType = 0;
@@ -1004,8 +1004,8 @@
 	};
 	2DA421BB0D689B60003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 13";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 13";
 		rLen = 0;
 		rLoc = 136;
 		rType = 0;
@@ -1082,8 +1082,8 @@
 	};
 	2DA421C40D689BCC003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 13";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 13";
 		rLen = 0;
 		rLoc = 136;
 		rType = 0;
@@ -1159,7 +1159,7 @@
 	2DA421CE0D689DD1003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "note: candidates are: sLatLon::sLatLon(double, double)";
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
 		rLen = 1;
 		rLoc = 22;
 		rType = 1;
@@ -1207,8 +1207,8 @@
 	};
 	2DA421D30D689DD1003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 22";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 22";
 		rLen = 59;
 		rLoc = 292;
 		rType = 0;
@@ -1259,8 +1259,8 @@
 	};
 	2DA421D90D689DD1003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 21";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 21";
 		rLen = 0;
 		rLoc = 291;
 		rType = 0;
@@ -1329,8 +1329,8 @@
 	};
 	2DA421E00D689DD1003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 42";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 42";
 		rLen = 0;
 		rLoc = 790;
 		rType = 0;
@@ -1339,8 +1339,8 @@
 	};
 	2DA421E10D689DD1003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 43";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 43";
 		rLen = 0;
 		rLoc = 825;
 		rType = 0;
@@ -1349,8 +1349,8 @@
 	};
 	2DA421E80D689E93003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 17";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 17";
 		rLen = 2;
 		rLoc = 212;
 		rType = 0;
@@ -1377,8 +1377,8 @@
 	};
 	2DA421EB0D689E93003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 21";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 21";
 		rLen = 0;
 		rLoc = 291;
 		rType = 0;
@@ -1397,8 +1397,8 @@
 	};
 	2DA421ED0D689E93003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 17";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 17";
 		rLen = 2;
 		rLoc = 212;
 		rType = 0;
@@ -1487,8 +1487,8 @@
 	};
 	2DA4222F0D68A0C6003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 22";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 22";
 		rLen = 0;
 		rLoc = 291;
 		rType = 0;
@@ -1547,8 +1547,8 @@
 	};
 	2DA422350D68A0C6003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 22";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 22";
 		rLen = 0;
 		rLoc = 291;
 		rType = 0;
@@ -1791,8 +1791,8 @@
 	};
 	2DA422600D68CD9B003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 38";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 38";
 		rLen = 0;
 		rLoc = 720;
 		rType = 0;
@@ -1818,8 +1818,8 @@
 	};
 	2DA422690D68D22F003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 38";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 38";
 		rLen = 0;
 		rLoc = 720;
 		rType = 0;
@@ -1846,8 +1846,8 @@
 	};
 	2DA4226C0D68D22F003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DA421460D688DD3003E5D41 /* ZipCodes.h */;
-		name = "ZipCodes.h: 38";
+		fRef = 2DA421460D688DD3003E5D41 /* zipcodes.h */;
+		name = "zipcodes.h: 38";
 		rLen = 0;
 		rLoc = 720;
 		rType = 0;
