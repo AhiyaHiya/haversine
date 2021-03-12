@@ -1,5 +1,5 @@
 /*
- *  ZipCodes.h
+ *  zipcodes.h
  *  Haversine
  *
  *  Created by Jaime Rios on 2/17/08.
