@@ -10,7 +10,7 @@
 		2D882AA00D5F9A540018222C /* WndController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D882A9F0D5F9A540018222C /* WndController.mm */; };
 		2DA421480D688DD3003E5D41 /* ZipCodes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DA421470D688DD3003E5D41 /* ZipCodes.cpp */; };
 		2DA422410D68A0F1003E5D41 /* zips.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2DA422400D68A0F1003E5D41 /* zips.csv */; };
-		2DBF525D0D67C6A4001B6EB4 /* Harversine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */; };
+		2DBF525D0D67C6A4001B6EB4 /* haversine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -31,8 +31,8 @@
 		2DA421460D688DD3003E5D41 /* ZipCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipCodes.h; sourceTree = "<group>"; };
 		2DA421470D688DD3003E5D41 /* ZipCodes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZipCodes.cpp; sourceTree = "<group>"; };
 		2DA422400D68A0F1003E5D41 /* zips.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zips.csv; sourceTree = "<group>"; };
-		2DBF525B0D67C6A4001B6EB4 /* Harversine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Harversine.h; sourceTree = "<group>"; };
-		2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Harversine.cpp; sourceTree = "<group>"; };
+		2DBF525B0D67C6A4001B6EB4 /* haversine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ../haversine.h; sourceTree = "<group>"; };
+		2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ../haversine.cpp; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Haversine_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Haversine_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Haversine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haversine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,8 +131,8 @@
 		2DA421450D688DBA003E5D41 /* Example code */ = {
 			isa = PBXGroup;
 			children = (
-				2DBF525B0D67C6A4001B6EB4 /* Harversine.h */,
-				2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */,
+				2DBF525B0D67C6A4001B6EB4 /* haversine.h */,
+				2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */,
 				2DA421460D688DD3003E5D41 /* ZipCodes.h */,
 				2DA421470D688DD3003E5D41 /* ZipCodes.cpp */,
 			);
@@ -204,7 +204,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				2D882AA00D5F9A540018222C /* WndController.mm in Sources */,
-				2DBF525D0D67C6A4001B6EB4 /* Harversine.cpp in Sources */,
+				2DBF525D0D67C6A4001B6EB4 /* haversine.cpp in Sources */,
 				2DA421480D688DD3003E5D41 /* ZipCodes.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

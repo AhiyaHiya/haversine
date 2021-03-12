@@ -1,6 +1,6 @@
 
 #import "WndController.h"
-#include "Harversine.h"
+#include "haversine.h"
 #include "ZipCodes.h"
 
 #include <string>

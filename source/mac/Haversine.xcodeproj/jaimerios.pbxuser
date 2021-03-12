@@ -299,7 +299,7 @@
 	};
 	2D6D6E950D67CEFB00A38313 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -309,8 +309,8 @@
 	};
 	2D6D6E9C0D67D55600A38313 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 9";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 9";
 		rLen = 0;
 		rLoc = 107;
 		rType = 0;
@@ -319,7 +319,7 @@
 	};
 	2D6D6E9D0D67D55600A38313 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -329,8 +329,8 @@
 	};
 	2D6D6E9F0D67D55600A38313 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 9";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 9";
 		rLen = 0;
 		rLoc = 107;
 		rType = 0;
@@ -404,15 +404,15 @@
 	};
 	2DA421300D688C2C003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
 		rLen = 0;
 		rLoc = 196;
 		rType = 0;
 	};
 	2DA421320D688D94003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 11";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 11";
 		rLen = 0;
 		rLoc = 168;
 		rType = 0;
@@ -437,8 +437,8 @@
 	};
 	2DA4216B0D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 9";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 9";
 		rLen = 0;
 		rLoc = 107;
 		rType = 0;
@@ -465,8 +465,8 @@
 	};
 	2DA4216E0D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 9";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 9";
 		rLen = 0;
 		rLoc = 107;
 		rType = 0;
@@ -809,14 +809,14 @@
 	};
 	2DA421A30D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		rLen = 0;
 		rLoc = 2147483647;
 		rType = 0;
 	};
 	2DA421A40D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 47";
 		rLen = 0;
 		rLoc = 1191;
@@ -826,8 +826,8 @@
 	};
 	2DA421A50D689AC4003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 11";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 11";
 		rLen = 0;
 		rLoc = 168;
 		rType = 0;
@@ -886,7 +886,7 @@
 	};
 	2DA421AC0D689AF3003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 47";
 		rLen = 0;
 		rLoc = 1191;
@@ -896,8 +896,8 @@
 	};
 	2DA421AD0D689AF3003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 11";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 11";
 		rLen = 0;
 		rLoc = 168;
 		rType = 0;
@@ -964,7 +964,7 @@
 	};
 	2DA421B60D689B46003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 47";
 		rLen = 0;
 		rLoc = 1191;
@@ -974,8 +974,8 @@
 	};
 	2DA421B70D689B46003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 11";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 11";
 		rLen = 0;
 		rLoc = 168;
 		rType = 0;
@@ -1034,7 +1034,7 @@
 	};
 	2DA421BE0D689B60003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 47";
 		rLen = 0;
 		rLoc = 1191;
@@ -1044,8 +1044,8 @@
 	};
 	2DA421BF0D689B60003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 11";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 11";
 		rLen = 0;
 		rLoc = 168;
 		rType = 0;
@@ -1112,7 +1112,7 @@
 	};
 	2DA421C70D689BCC003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 47";
 		rLen = 0;
 		rLoc = 1191;
@@ -1122,8 +1122,8 @@
 	};
 	2DA421C80D689BCC003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 11";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 11";
 		rLen = 0;
 		rLoc = 168;
 		rType = 0;
@@ -1309,7 +1309,7 @@
 	};
 	2DA421DE0D689DD1003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 47";
 		rLen = 0;
 		rLoc = 1191;
@@ -1319,8 +1319,8 @@
 	};
 	2DA421DF0D689DD1003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 11";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 11";
 		rLen = 0;
 		rLoc = 168;
 		rType = 0;
@@ -1457,7 +1457,7 @@
 	};
 	2DA421F30D689E93003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 47";
 		rLen = 0;
 		rLoc = 1191;
@@ -1467,8 +1467,8 @@
 	};
 	2DA421F40D689E93003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525B0D67C6A4001B6EB4 /* Harversine.h */;
-		name = "Harversine.h: 11";
+		fRef = 2DBF525B0D67C6A4001B6EB4 /* haversine.h */;
+		name = "haversine.h: 11";
 		rLen = 0;
 		rLoc = 168;
 		rType = 0;
@@ -1517,7 +1517,7 @@
 	};
 	2DA422320D68A0C6003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -1577,7 +1577,7 @@
 	};
 	2DA422380D68A0C6003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
 		name = "Harversine.c: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -1597,8 +1597,8 @@
 	};
 	2DA4223A0D68A0C6003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
-		name = "Harversine.cpp: 37";
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
+		name = "haversine.cpp: 37";
 		rLen = 0;
 		rLoc = 902;
 		rType = 0;
@@ -1607,8 +1607,8 @@
 	};
 	2DA4223B0D68A0E1003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
-		name = "Harversine.cpp: 37";
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
+		name = "haversine.cpp: 37";
 		rLen = 0;
 		rLoc = 902;
 		rType = 0;
@@ -1624,8 +1624,8 @@
 	};
 	2DA4223D0D68A0E1003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
-		name = "Harversine.cpp: 37";
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
+		name = "haversine.cpp: 37";
 		rLen = 0;
 		rLoc = 902;
 		rType = 0;
@@ -1654,8 +1654,8 @@
 	};
 	2DA422440D68A106003E5D41 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */;
-		name = "Harversine.cpp: 37";
+		fRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */;
+		name = "haversine.cpp: 37";
 		rLen = 0;
 		rLoc = 902;
 		rType = 0;
@@ -2215,7 +2215,7 @@
 		vrLen = 946;
 		vrLoc = 1926;
 	};
-	2DBF525B0D67C6A4001B6EB4 /* Harversine.h */ = {
+	2DBF525B0D67C6A4001B6EB4 /* haversine.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {778, 641}}";
 			sepNavSelRange = "{168, 0}";
@@ -2223,7 +2223,7 @@
 			sepNavWindowFrame = "{{15, 73}, {837, 754}}";
 		};
 	};
-	2DBF525C0D67C6A4001B6EB4 /* Harversine.cpp */ = {
+	2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {955, 826}}";
 			sepNavSelRange = "{902, 0}";
