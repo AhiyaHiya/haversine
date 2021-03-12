@@ -31,28 +31,31 @@
  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
  var d = R * c;
  */
-auto CalculateDistance(const Angle latitude1,
-                       const Angle longtitude1,
-                       const Angle latitude2,
-                       const Angle longtitude2) -> Angle
+auto calculate_distance(const angle_t latitude1,
+                        const angle_t longtitude1,
+                        const angle_t latitude2,
+                        const angle_t longtitude2) -> angle_t
 {
-    const auto radius = Kilometers{6371}; // Earth's radius
+  const auto radius = kilometers_t{6371}; // Earth's radius
 
-    // Get the difference between our two points then convert the difference into radians
-    const auto latDelta = Convert(latitude2 - latitude1);
-    const auto lonDelta = Convert(longtitude2 - longtitude1);
+  // Get the difference between our two points then convert the difference into radians
+  const auto lat_delta = convert(latitude2 - latitude1);
+  const auto lon_delta = convert(longtitude2 - longtitude1);
 
-    const auto convertedLat1 = Convert(latitude1);
-    const auto convertedLat2 = Convert(latitude2);
+  const auto converted_lat1 = convert(latitude1);
+  const auto converted_lat2 = convert(latitude2);
 
-    const auto a =
-        pow(sin(latDelta / 2), 2) + cos(convertedLat1) * cos(convertedLat2) * pow(sin(lonDelta / 2), 2);
+  const auto a =
+      pow(sin(lat_delta / 2), 2) + cos(converted_lat1) * cos(converted_lat2) * pow(sin(lon_delta / 2), 2);
 
-    const auto c = 2 * atan2(sqrt(a), sqrt(1 - a));
-    const auto d = radius * c;
+  const auto c = 2 * atan2(sqrt(a), sqrt(1 - a));
+  const auto d = radius * c;
 
-    return d;
+  return d;
 }
 
-// Convert our passed value to Radians
-auto Convert(const Angle angle) -> Radians { return angle * (M_PI / 180); }
+// convert our passed value to radians_t
+auto convert(const angle_t angle) -> radians_t
+{
+  return angle * (M_PI / 180);
+}

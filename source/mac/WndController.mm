@@ -47,7 +47,7 @@ using namespace std;
 {
     (void)sender;
 
-    Angle distance = 0.0;
+    angle_t distance = 0.0;
 
     if ([chkUseLatLon state])
     {
@@ -57,7 +57,7 @@ using namespace std;
         const auto lat2 = [txtLat2 doubleValue];
         const auto lon2 = [txtLon2 doubleValue];
 
-        distance = CalculateDistance(lat1, lon1, lat2, lon2);
+        distance = calculate_distance(lat1, lon1, lat2, lon2);
     }
     else
     {
@@ -74,12 +74,12 @@ using namespace std;
         const auto lat2 = ll2.GetLat();
         const auto lon2 = ll2.GetLon();
 
-        distance = CalculateDistance(lat1, lon1, lat2, lon2);
+        distance = calculate_distance(lat1, lon1, lat2, lon2);
     }
 
     if (distance > 0.0)
     {
-        // Our value is returned to us in Kilometers, so it has to be converted to Miles if needed
+        // Our value is returned to us in kilometers_t, so it has to be converted to Miles if needed
         if ([chkMiles state])
             distance = distance / 1.609344;
 

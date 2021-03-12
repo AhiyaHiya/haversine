@@ -6,13 +6,13 @@
  *
  */
 
-using Angle      = double;
-using Radians    = double;
-using Kilometers = double;
+using angle_t      = double;
+using radians_t    = double;
+using kilometers_t = double;
 
-auto CalculateDistance(const Angle latitude1,
-                       const Angle longtitude1,
-                       const Angle latitude2,
-                       const Angle longtitude2) -> Angle;
+auto calculate_distance(const angle_t latitude1,
+                        const angle_t longtitude1,
+                        const angle_t latitude2,
+                        const angle_t longtitude2) -> angle_t;
 
-auto Convert(const Angle angle) -> Radians;
+auto convert(const angle_t angle) -> radians_t;
