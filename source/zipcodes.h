@@ -10,34 +10,34 @@
 #include <string>
 #include <tuple>
 
-using UTF8Path   = std::string;
-using ErrNum     = int32_t;
-using ErrMessage = std::string;
-using Success    = bool;
+using utf8path_t   = std::string;
+using errnum_t     = int32_t;
+using errmessage_t = std::string;
+using success_t    = bool;
 
 // Structure for containing our Latitude and Longitude pair
-struct LatLon
+struct lat_lon
 {
-  private:
-    double latitude;
-    double longtitude;
+private:
+  double latitude;
+  double longtitude;
 
-  public:
-    LatLon()
-        : latitude(0)
-        , longtitude(0){};
-    LatLon(const double lat, const double lon)
-        : latitude(lat)
-        , longtitude(lon){};
+public:
+  lat_lon()
+    : latitude(0)
+    , longtitude(0){};
+  lat_lon(const double lat, const double lon)
+    : latitude(lat)
+    , longtitude(lon){};
 
-    double GetLat() const { return latitude; };
-    double GetLon() const { return longtitude; };
+  double GetLat() const { return latitude; };
+  double GetLon() const { return longtitude; };
 
-    void SetLat(const double newVal) { latitude = newVal; };
-    void SetLon(const double newVal) { longtitude = newVal; };
+  void SetLat(const double newVal) { latitude = newVal; };
+  void SetLon(const double newVal) { longtitude = newVal; };
 };
 
-using ZipCode    = int32_t;
-using ZipCodeMap = std::map< ZipCode, LatLon >;
+using zipcode_t  = int32_t;
+using zipcodes_t = std::map<zipcode_t, lat_lon>;
 
-auto LoadZipCodes(const UTF8Path filePath) -> std::tuple< Success, ErrMessage, ZipCodeMap >;
+auto LoadZipCodes(const utf8path_t filePath) -> std::tuple<success_t, errmessage_t, zipcodes_t>;

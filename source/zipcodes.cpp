@@ -19,7 +19,7 @@ using namespace std::string_literals;
 class FileHandler
 {
 public:
-  FileHandler(UTF8Path filePath)
+  FileHandler(utf8path_t filePath)
     : m_file{nullptr}
   {
     if (filePath.length() > 0)
@@ -63,7 +63,7 @@ auto IsNumber(const std::string& maybeNumber) -> bool
  Returns 0 when no errors were encounted or a positive number when an error was
  found.
  */
-auto LoadZipCodes(const UTF8Path filePath) -> std::tuple<Success, ErrMessage, ZipCodeMap>
+auto LoadZipCodes(const utf8path_t filePath) -> std::tuple<success_t, errmessage_t, zipcodes_t>
 {
   auto file = FileHandler(filePath);
 
@@ -71,10 +71,10 @@ auto LoadZipCodes(const UTF8Path filePath) -> std::tuple<Success, ErrMessage, Zi
   if (file.FileDescriptor() == nullptr)
   {
     const auto error = "An error occurred while attempting to open our file: " + std::string{strerror(errno)};
-    return std::make_tuple(false, error, ZipCodeMap{});
+    return std::make_tuple(false, error, zipcodes_t{});
   }
 
-  auto zipCodeMap = ZipCodeMap{};
+  auto zipCodeMap = zipcodes_t{};
   auto line       = std::vector<char>(1024, 'z');
   auto fields     = std::vector<std::string>(6, ""s);
 
@@ -96,11 +96,11 @@ auto LoadZipCodes(const UTF8Path filePath) -> std::tuple<Success, ErrMessage, Zi
     {
       const auto lat    = std::stod(fields[2]);
       const auto lon    = std::stod(fields[3]);
-      const auto latLon = LatLon{lat, lon};
+      const auto latLon = lat_lon{lat, lon};
       const auto zip    = std::stoi(fields[0]);
       zipCodeMap[zip]   = latLon;
     }
   }
 
-  return std::make_tuple(true, ErrMessage{"Success"}, zipCodeMap);
+  return std::make_tuple(true, errmessage_t{"success_t"}, zipCodeMap);
 }

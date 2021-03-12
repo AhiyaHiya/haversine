@@ -3,7 +3,7 @@
 
 @interface WndController : NSObject
 {
-    ZipCodeMap _zipCodeMap;
+    zipcodes_t _zipCodeMap;
     
     IBOutlet id chkKiloMeters;
     IBOutlet id chkMiles;
