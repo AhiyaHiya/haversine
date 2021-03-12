@@ -1,7 +1,7 @@
 
 #import "WndController.h"
 #include "haversine.h"
-#include "ZipCodes.h"
+#include "zipcodes.h"
 
 #include <string>
 

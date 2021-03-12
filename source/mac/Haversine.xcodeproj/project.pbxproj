@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D882AA00D5F9A540018222C /* WndController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D882A9F0D5F9A540018222C /* WndController.mm */; };
-		2DA421480D688DD3003E5D41 /* ZipCodes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DA421470D688DD3003E5D41 /* ZipCodes.cpp */; };
+		2DA421480D688DD3003E5D41 /* zipcodes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DA421470D688DD3003E5D41 /* zipcodes.cpp */; };
 		2DA422410D68A0F1003E5D41 /* zips.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2DA422400D68A0F1003E5D41 /* zips.csv */; };
 		2DBF525D0D67C6A4001B6EB4 /* haversine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -28,11 +28,11 @@
 		2D72BD0E1D01CC3A00490D44 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		2D882A9E0D5F9A540018222C /* WndController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WndController.h; sourceTree = "<group>"; };
 		2D882A9F0D5F9A540018222C /* WndController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WndController.mm; sourceTree = "<group>"; };
-		2DA421460D688DD3003E5D41 /* ZipCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipCodes.h; sourceTree = "<group>"; };
-		2DA421470D688DD3003E5D41 /* ZipCodes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZipCodes.cpp; sourceTree = "<group>"; };
-		2DA422400D68A0F1003E5D41 /* zips.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zips.csv; sourceTree = "<group>"; };
-		2DBF525B0D67C6A4001B6EB4 /* haversine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ../haversine.h; sourceTree = "<group>"; };
-		2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ../haversine.cpp; sourceTree = "<group>"; };
+		2DA421460D688DD3003E5D41 /* zipcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zipcodes.h; path = ../zipcodes.h; sourceTree = "<group>"; };
+		2DA421470D688DD3003E5D41 /* zipcodes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = zipcodes.cpp; path = ../zipcodes.cpp; sourceTree = "<group>"; };
+		2DA422400D68A0F1003E5D41 /* zips.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = zips.csv; path = ../../zips.csv; sourceTree = "<group>"; };
+		2DBF525B0D67C6A4001B6EB4 /* haversine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = haversine.h; path = ../haversine.h; sourceTree = "<group>"; };
+		2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = haversine.cpp; path = ../haversine.cpp; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Haversine_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Haversine_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Haversine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haversine.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +133,8 @@
 			children = (
 				2DBF525B0D67C6A4001B6EB4 /* haversine.h */,
 				2DBF525C0D67C6A4001B6EB4 /* haversine.cpp */,
-				2DA421460D688DD3003E5D41 /* ZipCodes.h */,
-				2DA421470D688DD3003E5D41 /* ZipCodes.cpp */,
+				2DA421460D688DD3003E5D41 /* zipcodes.h */,
+				2DA421470D688DD3003E5D41 /* zipcodes.cpp */,
 			);
 			name = "Example code";
 			sourceTree = "<group>";
@@ -173,6 +173,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Haversine */;
@@ -205,7 +206,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				2D882AA00D5F9A540018222C /* WndController.mm in Sources */,
 				2DBF525D0D67C6A4001B6EB4 /* haversine.cpp in Sources */,
-				2DA421480D688DD3003E5D41 /* ZipCodes.cpp in Sources */,
+				2DA421480D688DD3003E5D41 /* zipcodes.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				USE_HEADERMAP = NO;
@@ -351,6 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ..;
 				SDKROOT = macosx;
 				USE_HEADERMAP = NO;
 			};

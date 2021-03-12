@@ -1,5 +1,5 @@
 #import <Cocoa/Cocoa.h>
-#import "ZipCodes.h"
+#import "zipcodes.h"
 
 @interface WndController : NSObject
 {
