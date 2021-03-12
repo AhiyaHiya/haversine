@@ -20,27 +20,27 @@ class FileHandler
 {
 public:
   FileHandler(UTF8Path filePath)
-    : _file{nullptr}
+    : m_file{nullptr}
   {
     if (filePath.length() > 0)
     {
-      _file = fopen(filePath.c_str(), "r");
+      m_file = fopen(filePath.c_str(), "r");
     }
   };
 
   ~FileHandler()
   {
-    if (_file != nullptr)
+    if (m_file != nullptr)
     {
-      fclose(_file);
-      _file = nullptr;
+      fclose(m_file);
+      m_file = nullptr;
     }
   }
 
-  auto FileDescriptor() -> FILE* { return _file; }
+  auto FileDescriptor() -> FILE* { return m_file; }
 
 private:
-  FILE* _file;
+  FILE* m_file;
 };
 
 auto IsNumber(const std::string& maybeNumber) -> bool
@@ -63,16 +63,14 @@ auto IsNumber(const std::string& maybeNumber) -> bool
  Returns 0 when no errors were encounted or a positive number when an error was
  found.
  */
-auto LoadZipCodes(const UTF8Path filePath)
-    -> std::tuple<Success, ErrMessage, ZipCodeMap>
+auto LoadZipCodes(const UTF8Path filePath) -> std::tuple<Success, ErrMessage, ZipCodeMap>
 {
   auto file = FileHandler(filePath);
 
   // Check to see if there were any errors
   if (file.FileDescriptor() == nullptr)
   {
-    const auto error = "An error occurred while attempting to open our file: " +
-                       std::string{strerror(errno)};
+    const auto error = "An error occurred while attempting to open our file: " + std::string{strerror(errno)};
     return std::make_tuple(false, error, ZipCodeMap{});
   }
 
