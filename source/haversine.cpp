@@ -6,7 +6,7 @@
  *
  */
 
-#include "Harversine.h"
+#include "haversine.h"
 
 #include <math.h> // For PI
 
