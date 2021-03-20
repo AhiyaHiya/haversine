@@ -28,7 +28,7 @@ using namespace std;
     // Attempt to load our zip codes file
     string strFP = [[[NSBundle mainBundle] pathForResource:@"zips" ofType:@"csv" inDirectory:@""]
         cStringUsingEncoding:NSUTF8StringEncoding];
-    const auto result = LoadZipCodes(strFP);
+    const auto result = load_zip_codes(strFP);
     _zipCodeMap       = std::get< 2 >(result);
 }
 
@@ -69,10 +69,10 @@ using namespace std;
         const auto ll1 = _zipCodeMap.at(static_cast< int32_t >(zip1));
         const auto ll2 = _zipCodeMap.at(static_cast< int32_t >(zip2));
 
-        const auto lat1 = ll1.GetLat();
-        const auto lon1 = ll1.GetLon();
-        const auto lat2 = ll2.GetLat();
-        const auto lon2 = ll2.GetLon();
+        const auto lat1 = ll1.get_latitude();
+        const auto lon1 = ll1.get_longtitude();
+        const auto lat2 = ll2.get_latitude();
+        const auto lon2 = ll2.get_longtitude();
 
         distance = calculate_distance(lat1, lon1, lat2, lon2);
     }

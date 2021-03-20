@@ -16,10 +16,11 @@
 
 using namespace std::string_literals;
 
-class FileHandler
+/**********************************************************************/
+class file_handler
 {
 public:
-  FileHandler(utf8path_t filePath)
+  file_handler(utf8path_t filePath)
     : m_file{nullptr}
   {
     if (filePath.length() > 0)
@@ -28,7 +29,7 @@ public:
     }
   };
 
-  ~FileHandler()
+  ~file_handler()
   {
     if (m_file != nullptr)
     {
@@ -37,13 +38,14 @@ public:
     }
   }
 
-  auto FileDescriptor() -> FILE* { return m_file; }
+  auto file_descriptor() -> FILE* { return m_file; }
 
 private:
   FILE* m_file;
 };
 
-auto IsNumber(const std::string& maybeNumber) -> bool
+/**********************************************************************/
+auto is_number(const std::string& maybeNumber) -> bool
 {
   auto decimal = false;
   for (char c : maybeNumber)
@@ -58,28 +60,28 @@ auto IsNumber(const std::string& maybeNumber) -> bool
   return true;
 };
 
-/*
+/***********************************************************************
  Function for reading in our zip code table file.
  Returns 0 when no errors were encounted or a positive number when an error was
  found.
  */
-auto LoadZipCodes(const utf8path_t filePath) -> std::tuple<success_t, errmessage_t, zipcodes_t>
+auto load_zip_codes(const utf8path_t filePath) -> std::tuple<success_t, errmessage_t, zipcodes_t>
 {
-  auto file = FileHandler(filePath);
+  auto file = file_handler(filePath);
 
   // Check to see if there were any errors
-  if (file.FileDescriptor() == nullptr)
+  if (file.file_descriptor() == nullptr)
   {
     const auto error = "An error occurred while attempting to open our file: " + std::string{strerror(errno)};
     return std::make_tuple(false, error, zipcodes_t{});
   }
 
-  auto zipCodeMap = zipcodes_t{};
-  auto line       = std::vector<char>(1024, 'z');
-  auto fields     = std::vector<std::string>(6, ""s);
+  auto zip_codes = zipcodes_t{};
+  auto line      = std::vector<char>(1024, 'z');
+  auto fields    = std::vector<std::string>(6, ""s);
 
   // extract each field
-  auto filePtr = file.FileDescriptor();
+  auto filePtr = file.file_descriptor();
   while (fgets(line.data(), static_cast<int32_t>(line.size()), filePtr) != 0)
   {
     auto field = strtok(line.data(), ",");
@@ -92,15 +94,15 @@ auto LoadZipCodes(const utf8path_t filePath) -> std::tuple<success_t, errmessage
       field = std::strtok(nullptr, ",");
     }
 
-    if (IsNumber(fields[2]))
+    if (is_number(fields[2]))
     {
-      const auto lat    = std::stod(fields[2]);
-      const auto lon    = std::stod(fields[3]);
-      const auto latLon = lat_lon{lat, lon};
-      const auto zip    = std::stoi(fields[0]);
-      zipCodeMap[zip]   = latLon;
+      const auto lat     = std::stod(fields[2]);
+      const auto lon     = std::stod(fields[3]);
+      const auto lat_lon = lat_lon{lat, lon};
+      const auto zip     = std::stoi(fields[0]);
+      zip_codes[zip]     = lat_lon;
     }
   }
 
-  return std::make_tuple(true, errmessage_t{"success_t"}, zipCodeMap);
+  return std::make_tuple(true, errmessage_t{"success_t"}, zip_codes);
 }
