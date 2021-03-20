@@ -10,7 +10,7 @@
 
 #include <math.h> // For PI
 
-/*
+/**********************************************************************
  Haversine Formula
  R = earth’s radius (mean radius = 6,371km)
  Δlat = lat2− lat1

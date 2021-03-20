@@ -30,14 +30,14 @@ public:
     : latitude(lat)
     , longtitude(lon){};
 
-  double GetLat() const { return latitude; };
-  double GetLon() const { return longtitude; };
+  double get_latitude() const { return latitude; };
+  double get_longtitude() const { return longtitude; };
 
-  void SetLat(const double newVal) { latitude = newVal; };
-  void SetLon(const double newVal) { longtitude = newVal; };
+  void set_latitude(const double newVal) { latitude = newVal; };
+  void set_longtitude(const double newVal) { longtitude = newVal; };
 };
 
 using zipcode_t  = int32_t;
 using zipcodes_t = std::map<zipcode_t, lat_lon>;
 
-auto LoadZipCodes(const utf8path_t filePath) -> std::tuple<success_t, errmessage_t, zipcodes_t>;
+auto load_zip_codes(const utf8path_t filePath) -> std::tuple<success_t, errmessage_t, zipcodes_t>;
