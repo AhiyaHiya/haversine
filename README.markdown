@@ -1,4 +1,4 @@
-# C implementation of Haversine Formula
+# C++ implementation of Haversine Formula
 
 Jaime O. Rios
 
