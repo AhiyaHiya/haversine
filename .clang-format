@@ -22,7 +22,7 @@ BraceWrapping:
 BreakConstructorInitializers: BeforeComma
 BreakInheritanceList: BeforeComma
 Cpp11BracedListStyle: true
-ConstructorInitializerIndentWidth: 2
+ConstructorInitializerIndentWidth: 4
 ColumnLimit: 0
 FixNamespaceComments: true
 IncludeBlocks: Regroup
@@ -34,7 +34,7 @@ IncludeCategories:
   - Regex:    '.*'
     Priority: 3
 IndentCaseLabels: false
-IndentWidth: 2
+IndentWidth: 4
 Language: Cpp
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: All
