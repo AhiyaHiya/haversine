@@ -96,11 +96,11 @@ auto load_zip_codes(const utf8path_t filePath) -> std::tuple<success_t, errmessa
 
     if (is_number(fields[2]))
     {
-      const auto lat     = std::stod(fields[2]);
-      const auto lon     = std::stod(fields[3]);
-      const auto lat_lon = lat_lon{lat, lon};
-      const auto zip     = std::stoi(fields[0]);
-      zip_codes[zip]     = lat_lon;
+      const auto lat    = std::stod(fields[2]);
+      const auto lon    = std::stod(fields[3]);
+      const auto latlon = lat_lon{lat, lon};
+      const auto zip    = std::stoi(fields[0]);
+      zip_codes[zip]    = latlon;
     }
   }
 

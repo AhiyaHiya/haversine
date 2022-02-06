@@ -8,7 +8,7 @@
 
 #include "haversine.h"
 
-#include <math.h> // For PI
+#include <numbers>
 
 /**********************************************************************
  Haversine Formula
@@ -34,7 +34,7 @@
 auto calculate_distance(const angle_t latitude1,
                         const angle_t longtitude1,
                         const angle_t latitude2,
-                        const angle_t longtitude2) -> angle_t
+                        const angle_t longtitude2) -> kilometers_t
 {
   const auto radius = kilometers_t{6371}; // Earth's radius
 
@@ -57,5 +57,5 @@ auto calculate_distance(const angle_t latitude1,
 // convert our passed value to radians_t
 auto convert(const angle_t angle) -> radians_t
 {
-  return angle * (M_PI / 180);
+  return angle * (std::numbers::pi / 180);
 }
