@@ -20,21 +20,21 @@ struct lat_lon
 {
 private:
   double latitude;
-  double longtitude;
+  double longitude;
 
 public:
   lat_lon()
     : latitude(0)
-    , longtitude(0){};
+    , longitude(0){};
   lat_lon(const double lat, const double lon)
     : latitude(lat)
-    , longtitude(lon){};
+    , longitude(lon){};
 
   double get_latitude() const { return latitude; };
-  double get_longtitude() const { return longtitude; };
+  double get_longitude() const { return longitude; };
 
   void set_latitude(const double newVal) { latitude = newVal; };
-  void set_longtitude(const double newVal) { longtitude = newVal; };
+  void set_longitude(const double newVal) { longitude = newVal; };
 };
 
 using zipcode_t  = int32_t;

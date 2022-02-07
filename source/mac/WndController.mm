@@ -70,9 +70,9 @@ using namespace std;
         const auto ll2 = _zipCodeMap.at(static_cast< int32_t >(zip2));
 
         const auto lat1 = ll1.get_latitude();
-        const auto lon1 = ll1.get_longtitude();
+        const auto lon1 = ll1.get_longitude();
         const auto lat2 = ll2.get_latitude();
-        const auto lon2 = ll2.get_longtitude();
+        const auto lon2 = ll2.get_longitude();
 
         distance = calculate_distance(lat1, lon1, lat2, lon2);
     }

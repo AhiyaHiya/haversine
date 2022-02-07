@@ -55,9 +55,9 @@ int main(int argc, char** argv)
     const auto ll2 = zipcodes.at(end_zip);
 
     const auto lat1 = ll1.get_latitude();
-    const auto lon1 = ll1.get_longtitude();
+    const auto lon1 = ll1.get_longitude();
     const auto lat2 = ll2.get_latitude();
-    const auto lon2 = ll2.get_longtitude();
+    const auto lon2 = ll2.get_longitude();
 
     const auto distance = calculate_distance(lat1, lon1, lat2, lon2);
     printf("Distance between zips %d and %d is %d kilometers\n", start_zip, end_zip, (int)distance);

@@ -32,15 +32,15 @@
  var d = R * c;
  */
 auto calculate_distance(const angle_t latitude1,
-                        const angle_t longtitude1,
+                        const angle_t longitude1,
                         const angle_t latitude2,
-                        const angle_t longtitude2) -> kilometers_t
+                        const angle_t longitude2) -> kilometers_t
 {
   const auto radius = kilometers_t{6371}; // Earth's radius
 
   // Get the difference between our two points then convert the difference into radians
   const auto lat_delta = convert(latitude2 - latitude1);
-  const auto lon_delta = convert(longtitude2 - longtitude1);
+  const auto lon_delta = convert(longitude2 - longitude1);
 
   const auto converted_lat1 = convert(latitude1);
   const auto converted_lat2 = convert(latitude2);
