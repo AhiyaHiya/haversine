@@ -35,8 +35,8 @@ lat1 = lat1.toRad(), lat2 = lat2.toRad();
 
 
 var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
-Math.sin(dLon/2) * Math.sin(dLon/2); 
+Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) *
+Math.sin(dLon/2) * Math.sin(dLon/2);
 
 var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 
@@ -44,4 +44,4 @@ var d = R * c;
 
 
 # Changes
-Code has been modified to use C++14 formatting and where appropriate, code has been reformatted to be more verbose.
+Code has been modified to use C++ formatting and where appropriate, code has been reformatted to be more verbose.
