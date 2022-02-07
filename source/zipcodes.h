@@ -33,11 +33,11 @@ public:
   double get_latitude() const { return latitude; };
   double get_longitude() const { return longitude; };
 
-  void set_latitude(const double newVal) { latitude = newVal; };
-  void set_longitude(const double newVal) { longitude = newVal; };
+  void set_latitude(const double new_val) { latitude = new_val; };
+  void set_longitude(const double new_val) { longitude = new_val; };
 };
 
 using zipcode_t  = int32_t;
 using zipcodes_t = std::map<zipcode_t, lat_lon>;
 
-auto load_zip_codes(const utf8path_t filePath) -> std::tuple<success_t, errmessage_t, zipcodes_t>;
+auto load_zip_codes(const utf8path_t file_path) -> std::tuple<success_t, errmessage_t, zipcodes_t>;

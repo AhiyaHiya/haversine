@@ -20,12 +20,12 @@ using namespace std::string_literals;
 class file_handler
 {
 public:
-  file_handler(utf8path_t filePath)
+  file_handler(utf8path_t file_path)
     : m_file{nullptr}
   {
-    if (filePath.length() > 0)
+    if (file_path.length() > 0)
     {
-      m_file = fopen(filePath.c_str(), "r");
+      m_file = fopen(file_path.c_str(), "r");
     }
   };
 
@@ -62,18 +62,18 @@ auto is_number(const std::string& maybeNumber) -> bool
 
 /***********************************************************************
  Function for reading in our zip code table file.
- Returns 0 when no errors were encounted or a positive number when an error was
+ Returns 0 when no errors were encountered or a positive number when an error was
  found.
  */
-auto load_zip_codes(const utf8path_t filePath) -> std::tuple<success_t, errmessage_t, zipcodes_t>
+auto load_zip_codes(const utf8path_t file_path) -> std::tuple<success_t, errmessage_t, zipcodes_t>
 {
-  auto file = file_handler(filePath);
+  auto file = file_handler(file_path);
 
   // Check to see if there were any errors
   if (file.file_descriptor() == nullptr)
   {
     const auto error = "An error occurred while attempting to open our file: " + std::string{strerror(errno)};
-    return std::make_tuple(false, error, zipcodes_t{});
+    return {false, error, zipcodes_t{}};
   }
 
   auto zip_codes = zipcodes_t{};
@@ -104,5 +104,5 @@ auto load_zip_codes(const utf8path_t filePath) -> std::tuple<success_t, errmessa
     }
   }
 
-  return std::make_tuple(true, errmessage_t{"success_t"}, zip_codes);
+  return {true, errmessage_t{"success_t"}, zip_codes};
 }
