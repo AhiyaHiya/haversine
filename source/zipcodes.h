@@ -19,22 +19,22 @@ using success_t    = bool;
 struct lat_lon
 {
 private:
-  double latitude;
-  double longitude;
+  double m_latitude  = 0.0;
+  double m_longitude = 0.0;
 
 public:
   lat_lon()
-    : latitude(0)
-    , longitude(0){};
+    : m_latitude(0)
+    , m_longitude(0){};
   lat_lon(const double lat, const double lon)
-    : latitude(lat)
-    , longitude(lon){};
+    : m_latitude(lat)
+    , m_longitude(lon){};
 
-  double get_latitude() const { return latitude; };
-  double get_longitude() const { return longitude; };
+  double get_latitude() const { return m_latitude; };
+  double get_longitude() const { return m_longitude; };
 
-  void set_latitude(const double new_val) { latitude = new_val; };
-  void set_longitude(const double new_val) { longitude = new_val; };
+  void set_latitude(const double new_val) { m_latitude = new_val; };
+  void set_longitude(const double new_val) { m_longitude = new_val; };
 };
 
 using zipcode_t  = int32_t;

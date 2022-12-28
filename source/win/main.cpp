@@ -38,8 +38,8 @@ int main(int argc, char** argv)
         std::exit(1);
     }
 
-    const auto start_zip = program.get<int>("--start_zip");
-    const auto end_zip = program.get<int>("--end_zip");
+    const auto start_zip = program.get<int32_t>("--start_zip");
+    const auto end_zip   = program.get<int32_t>("--end_zip");
 
     auto [success, errmessage, zipcodes] = load_zip_codes("zips.csv");
 
@@ -51,8 +51,8 @@ int main(int argc, char** argv)
     }
 
     // Get our Latitude and Longitude for each zip code
-    const auto ll1 = zipcodes.at(start_zip);
-    const auto ll2 = zipcodes.at(end_zip);
+    const auto& ll1 = zipcodes.at(start_zip);
+    const auto& ll2 = zipcodes.at(end_zip);
 
     const auto lat1 = ll1.get_latitude();
     const auto lon1 = ll1.get_longitude();

@@ -36,7 +36,7 @@ auto calculate_distance(const angle_t latitude1,
                         const angle_t latitude2,
                         const angle_t longitude2) -> kilometers_t
 {
-  const auto radius = kilometers_t{6371}; // Earth's radius
+  const auto earths_radius = kilometers_t{6371};
 
   // Get the difference between our two points then convert the difference into radians
   const auto lat_delta = convert(latitude2 - latitude1);
@@ -49,7 +49,7 @@ auto calculate_distance(const angle_t latitude1,
       pow(sin(lat_delta / 2), 2) + cos(converted_lat1) * cos(converted_lat2) * pow(sin(lon_delta / 2), 2);
 
   const auto c = 2 * atan2(sqrt(a), sqrt(1 - a));
-  const auto d = radius * c;
+  const auto d = earths_radius * c;
 
   return d;
 }
